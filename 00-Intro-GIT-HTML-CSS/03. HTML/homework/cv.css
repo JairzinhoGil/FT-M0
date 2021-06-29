@@ -1,0 +1,17 @@
+#personal {
+    padding: 80px;
+    border: 20px solid blue;
+    font-style: oblique;
+}
+
+#laboral {
+    padding: 80px;
+    border: 20px solid blue;
+    font-style: italic;
+}
+
+#hobbies {
+    padding: 80px;
+    border: 20px solid blue;
+    font-style: initial;
+}
