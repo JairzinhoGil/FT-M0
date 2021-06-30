@@ -6,33 +6,82 @@ archivo en cualquiera de estas carpetas, estás en el lugar equivocado.
 /* Ejercicio 1: Centrar el texto en un span */
 
 /* Arrancaremos este ejercicio por vos: */
-#ejercicioUno {
+#ejercicioUno  { 
+    display:block;
+    text-align: center;
+    
+} 
+
+* Ejercicio 2: Posicionar el header */
+
+#ejercicioDos  
+{display: none;}  
+        
+#ejercicioTres {
+    position: absolute;
+    top: 100px;
+    left: 200px;
 
 }
 
+#ejercicioCuatro {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
 
-/* Ejercicio 2: Posicionar el header */
+#ejercicioCinco  {
+    
+    display: flex;
+    justify-content: space-around;
+ /*ejercicio 6*/
+    flex-direction: row-reverse;
+}
 
-/* Acá va tu código */
+#ejercicioSiete {
 
+    
+    display: flex;
+        justify-self: right;
+        flex-direction: column-reverse;
+       
+}
 
+#elementoUno {
 
-/* Ejercicio 3: */
+    display: flex;
+        justify-self: left;
+        flex-direction: row-reverse;
+        align-items: center;
+        align-self: inherit;
+        color: lightcoral;
 
-/* Acá va tu código */
+}
 
+#elementoDos {
+    display: inline;
+    justify-self: right;
+        flex-direction: row-reverse;
+               align-items: center;
+               align-self: center;
+               color: lightcoral;
+    
+    }
 
+#elementoTres {
+    justify-self: end;
+        flex-direction: initial;
+    align-self: flex-end;
+        align-items: stretch;
+        color: lawngreen;
+}
 
-/* Ejercicio 4: */
+#elementoCuatro {
+    justify-self: end;
+        flex-direction: initial;
+    align-self: flex-end;
+        align-items: stretch;
+        flex-direction: inherit;
+        color: blue;
+}
 
-/* Acá va tu código */
-
-
-
-/* Ejercicio 5: */
-
-/* Acá va tu código */
-
-
-
-/* Ejercicio 6. */
