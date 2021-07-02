@@ -5,12 +5,24 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
+if ( x > y ){
+  return x;
+}else if ( x <=y ){
+  return y;
+}
 }
 
 function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
+  if (edad >= 18) {
+    return "Allowed";
+  } 
+  else {
+    return "Not allowed";
+  }
+  
 }
   
 function conection(status) {
@@ -19,17 +31,42 @@ function conection(status) {
   //Cuando el estado es igual a 2, el usuario está "Away"
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
-}
+  const ONLINE = 1;
+  const AWAY = 2;
 
+  switch (status) {
+    case ONLINE:
+      return "Online";
+
+      case AWAY:
+      return "Away";
+                  
+    default:
+      return "Offline";
+  }
+}
 function saludo(idioma) {
   // Devuelve un saludo en tres diferentes lenguajes:
   // Si "idioma" es "aleman", devuelve "Guten Tag!"
   // Si "idioma" es "mandarin", devuelve "Ni Hao!"
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
+switch (idioma) {
+  case "aleman":
+    return "Guten Tag!";
+    
+    case "mandarin":
+    return "Ni Hao!";
+    
+    case "ingles":
+    return "Hello!";
+
+  default:
+    return "Hola!";
+    
+}
   // Tu código:
 }
-
 /*
 Para implementar la siguiente función vamos a utilizar una estructura de control de flujo nueva, 
 llamada switch, si no estás familiarizado con esta estructura, es un buen escenario para hacerle 
@@ -49,21 +86,53 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
+  switch (color) {
+    case "blue":
+      return "This is blue";
+
+      case "red":
+      return "This is red";
+
+      case "green":
+      return "This is green";
+  
+      case "orange":
+        return "This is orange";
+
+    default:
+      return "Color not found";
+      
+  }
 }
 
 function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
+  switch (numero) {
+    case 10:
+return true;  
+     
+case 5:
+  return true;  
+    default:
+      return false;
+    
+  }
 }
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
+  if (numero >20 && numero <50) {
+
+  return true;
+} 
+return false;
 }
 
-function esEntero(numero) {
+  function esEntero(numero) {
   // Devuelve "true" si "numero" es un entero (int/integer)
   // Ejemplo: 0.8 -> false
   // Ejemplo: 1 -> true
@@ -71,6 +140,10 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
+  if (Number .isInteger(numero)) {
+    return true;
+  }
+  return false;
 }
 
 function fizzBuzz(numero) {
@@ -78,6 +151,20 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
+  let i = numero;
+
+  if (i % 3 === 0) {
+    return "fizz";
+  }
+  else if (i % 5 === 0) {
+    return "buzz";
+  }
+  else if (i % 5 === 0 ) && (i % 3 === 0) {
+    return "fizzbuzz";
+  }
+  else {
+    return numero;
+  }
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -120,7 +207,10 @@ function doWhile(numero) {
 // No modificar nada debajo de esta línea
 // --------------------------------
 
-module.exports = {
+
+
+
+  module.exports = {
   obtenerMayor,
   mayoriaDeEdad,
   conection,
@@ -135,4 +225,4 @@ module.exports = {
   esVerdadero,
   tieneTresDigitos,
   doWhile
-};
+  };
